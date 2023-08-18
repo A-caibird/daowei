@@ -133,7 +133,7 @@
 								30.00元
 							</text>
 							<text>
-								*3
+								×3
 							</text>
 						</view>
 					</view>
