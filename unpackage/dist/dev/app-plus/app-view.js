@@ -2975,29 +2975,33 @@ var render = function () {
         [_c("v-uni-text", { attrs: { _i: 2 } }, [_vm._v("消息")])],
         1
       ),
+      _c("uni-view", {
+        staticStyle: { width: "100%", height: "128rpx" },
+        attrs: { _i: 3 },
+      }),
       _c(
         "uni-view",
-        { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
+        { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
         _vm._l(3, function (item, $10, $20, $30) {
           return _c(
             "uni-view",
             {
               key: item,
-              staticClass: _vm._$g("4-" + $30, "sc"),
-              attrs: { _i: "4-" + $30 },
+              staticClass: _vm._$g("5-" + $30, "sc"),
+              attrs: { _i: "5-" + $30 },
             },
             [
               _c(
                 "uni-view",
                 {
-                  staticClass: _vm._$g("5-" + $30, "sc"),
-                  attrs: { _i: "5-" + $30 },
+                  staticClass: _vm._$g("6-" + $30, "sc"),
+                  attrs: { _i: "6-" + $30 },
                 },
                 [
-                  _c("v-uni-text", { attrs: { _i: "6-" + $30 } }, [
+                  _c("v-uni-text", { attrs: { _i: "7-" + $30 } }, [
                     _vm._v("2021-01-12"),
                   ]),
-                  _c("v-uni-text", { attrs: { _i: "7-" + $30 } }, [
+                  _c("v-uni-text", { attrs: { _i: "8-" + $30 } }, [
                     _vm._v("09:00:00"),
                   ]),
                 ],
@@ -3006,21 +3010,21 @@ var render = function () {
               _c(
                 "uni-view",
                 {
-                  staticClass: _vm._$g("8-" + $30, "sc"),
-                  attrs: { _i: "8-" + $30 },
+                  staticClass: _vm._$g("9-" + $30, "sc"),
+                  attrs: { _i: "9-" + $30 },
                 },
                 [
                   _c(
                     "uni-view",
                     {
-                      staticClass: _vm._$g("9-" + $30, "sc"),
-                      attrs: { _i: "9-" + $30 },
+                      staticClass: _vm._$g("10-" + $30, "sc"),
+                      attrs: { _i: "10-" + $30 },
                     },
                     [
-                      _c("v-uni-text", { attrs: { _i: "10-" + $30 } }, [
+                      _c("v-uni-text", { attrs: { _i: "11-" + $30 } }, [
                         _vm._v("您有一个新订单"),
                       ]),
-                      _c("v-uni-text", { attrs: { _i: "11-" + $30 } }, [
+                      _c("v-uni-text", { attrs: { _i: "12-" + $30 } }, [
                         _vm._v(
                           "用户张三预定了2021-01-13 09:00 家电安装 项目请及时处理"
                         ),
@@ -3037,7 +3041,7 @@ var render = function () {
         }),
         1
       ),
-      _c("my-footer", { attrs: { _i: 12 } }),
+      _c("my-footer", { attrs: { _i: 13 } }),
     ],
     1
   )
@@ -4352,7 +4356,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n.container[data-v-6eb09934] {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  top: 0;\n  background-color: #F8F8F8;\n  overflow-y: auto;\n}\n.container .nav[data-v-6eb09934] {\n  width: 100%;\n  height: 128rpx;\n  background: #E94A44;\n  display: flex;\n  flex-direction: column;\n  flex-direction: column-reverse;\n  align-items: center;\n  justify-self: flex-end;\n}\n.container .nav uni-text[data-v-6eb09934] {\n  font-size: 36rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 700;\n  color: #ffffff;\n  line-height: 36rpx;\n  margin-bottom: 20rpx;\n}\n.container .msg-area[data-v-6eb09934] {\n  display: flex;\n  flex-direction: column;\n  padding: 0 30rpx;\n}\n.container .msg-area .item[data-v-6eb09934] {\n  margin-top: 30rpx;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container .msg-area .item .time[data-v-6eb09934] {\n  margin-bottom: 20rpx;\n}\n.container .msg-area .item .time uni-text[data-v-6eb09934] {\n  font-size: 24rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 500;\n  color: #B5B5B5;\n  line-height: 33rpx;\n}\n.container .msg-area .item .time uni-text[data-v-6eb09934]:first-of-type {\n  margin-right: 20rpx;\n}\n.container .msg-area .item .detail[data-v-6eb09934] {\n  background: #FFFFFF;\n  border-radius: 10rpx;\n  padding: 32rpx;\n  box-sizing: border-box;\n}\n.container .msg-area .item .detail .title uni-text[data-v-6eb09934] {\n  display: block;\n}\n.container .msg-area .item .detail .title uni-text[data-v-6eb09934]:first-of-type {\n  font-size: 34rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 800;\n  color: #2E2727;\n  line-height: 48rpx;\n  margin-bottom: 20rpx;\n}\n.container .msg-area .item .detail .title uni-text[data-v-6eb09934]:last-of-type {\n  font-size: 28rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 400;\n  color: #B5B5B5;\n  line-height: 40rpx;\n}\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/**\n * 这里是uni-app内置的常用样式变量\n *\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\n *\n */\n/**\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\n *\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\n */\n/* 颜色变量 */\n/* 行为相关颜色 */\n/* 文字基本颜色 */\n/* 背景颜色 */\n/* 边框颜色 */\n/* 尺寸变量 */\n/* 文字尺寸 */\n/* 图片尺寸 */\n/* Border Radius */\n/* 水平间距 */\n/* 垂直间距 */\n/* 透明度 */\n/* 文章场景相关 */\n.container[data-v-6eb09934] {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  top: 0;\n  background-color: #F8F8F8;\n  overflow-y: auto;\n}\n.container .nav[data-v-6eb09934] {\n  width: 100%;\n  height: 128rpx;\n  background: #E94A44;\n  display: flex;\n  flex-direction: column;\n  flex-direction: column-reverse;\n  align-items: center;\n  justify-self: flex-end;\n  position: fixed;\n  left: 0;\n  top: 0;\n}\n.container .nav uni-text[data-v-6eb09934] {\n  font-size: 36rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 700;\n  color: #ffffff;\n  line-height: 36rpx;\n  margin-bottom: 20rpx;\n}\n.container .msg-area[data-v-6eb09934] {\n  display: flex;\n  flex-direction: column;\n  padding: 0 30rpx;\n}\n.container .msg-area .item[data-v-6eb09934] {\n  margin-top: 30rpx;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.container .msg-area .item .time[data-v-6eb09934] {\n  margin-bottom: 20rpx;\n}\n.container .msg-area .item .time uni-text[data-v-6eb09934] {\n  font-size: 24rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 500;\n  color: #B5B5B5;\n  line-height: 33rpx;\n}\n.container .msg-area .item .time uni-text[data-v-6eb09934]:first-of-type {\n  margin-right: 20rpx;\n}\n.container .msg-area .item .detail[data-v-6eb09934] {\n  background: #FFFFFF;\n  border-radius: 10rpx;\n  padding: 32rpx;\n  box-sizing: border-box;\n}\n.container .msg-area .item .detail .title uni-text[data-v-6eb09934] {\n  display: block;\n}\n.container .msg-area .item .detail .title uni-text[data-v-6eb09934]:first-of-type {\n  font-size: 34rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 800;\n  color: #2E2727;\n  line-height: 48rpx;\n  margin-bottom: 20rpx;\n}\n.container .msg-area .item .detail .title uni-text[data-v-6eb09934]:last-of-type {\n  font-size: 28rpx;\n  font-family: PingFangSC-Regular, PingFang SC;\n  font-weight: 400;\n  color: #B5B5B5;\n  line-height: 40rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 

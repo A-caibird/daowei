@@ -3,6 +3,9 @@
 		<view class="nav">
 			<text>消息</text>
 		</view>
+		<view style="width: 100%;
+			height: 128rpx;">
+		</view>
 		<view class="msg-area">
 			<view class="item" v-for="item of 3" :key="item">
 				<view class="time">
@@ -31,7 +34,7 @@
 <script>
 	import myFooter from '@/components/footer.vue'
 	export default {
-		components:{
+		components: {
 			myFooter
 		},
 		data() {
@@ -59,7 +62,10 @@
 			flex-direction: column-reverse;
 			align-items: center;
 			justify-self: flex-end;
-			
+			position: fixed;
+			left: 0;
+			top: 0;
+
 			text {
 				@include fontStyle(36rpx, 700, #ffffff, 36rpx);
 				margin-bottom: 20rpx;
@@ -68,14 +74,15 @@
 
 		.msg-area {
 			@include flexY;
-			padding:0 30rpx;
-			
+			padding: 0 30rpx;
+
 			.item {
 				margin-top: 30rpx;
 				@include flexY;
 				align-items: center;
+
 				.time {
-					
+
 					text {
 						@include fontStyle(24rpx, 500, #B5B5B5, 33rpx);
 
@@ -83,16 +90,18 @@
 							margin-right: 20rpx;
 						}
 					}
+
 					margin-bottom: 20rpx;
 				}
 
 				.detail {
 					background: #FFFFFF;
 					border-radius: 10rpx;
-					padding:32rpx;
+					padding: 32rpx;
 					box-sizing: border-box;
+
 					.title {
-						
+
 						text {
 							display: block;
 
