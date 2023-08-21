@@ -53,14 +53,16 @@
 
 		.nav {
 			width: 100%;
-			height: 168rpx;
+			height: 128rpx;
 			background: #E94A44;
 			@include flexY;
+			flex-direction: column-reverse;
 			align-items: center;
-			justify-content: center;
-
+			justify-self: flex-end;
+			
 			text {
 				@include fontStyle(36rpx, 700, #ffffff, 36rpx);
+				margin-bottom: 20rpx;
 			}
 		}
 

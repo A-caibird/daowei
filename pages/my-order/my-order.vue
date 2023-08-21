@@ -305,7 +305,7 @@
 					gap: 29rpx 0;
 
 					text {
-						@include fontStyle(28rpx, 400, #666666, 40rpx);
+						@include fontStyle(28rpx, 400, #dcdcdc, 40rpx);
 					}
 
 					image {
