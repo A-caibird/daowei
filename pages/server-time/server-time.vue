@@ -371,7 +371,7 @@
 		.btn {
 			width: 100%;
 			@include flexY;
-			position: absolute;
+			position: fixed;
 			bottom: 75rpx;
 
 			text {
