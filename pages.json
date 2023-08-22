@@ -4,6 +4,22 @@
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/server-time/server-time",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},{
+		    "path" : "pages/server-location/server-location",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},{
 		    "path" : "pages/server-event/server-event",
 		    "style" :                                                                                    
 		    {
@@ -55,6 +71,8 @@
 			}
 		}
 	    
+       
+       
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
