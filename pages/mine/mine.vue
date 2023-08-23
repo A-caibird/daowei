@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container " :class="{active:share}" >
 		<view class="head">
 			<view class="nav">
 				<text>
@@ -27,7 +27,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="right">
+				<view class="right" @tap="open">
 					<image src="@/static/mine/qr.png">
 					</image>
 				</view>
@@ -172,6 +172,17 @@
 			<image src="@/static/mine/ad.png">
 			</image>
 		</view>
+		<template v-if="0">
+			<view class="popCenter">
+
+			</view>
+		</template>
+		<template v-if="0">
+			<view class="popBottom">
+
+			</view>
+		</template>
+
 		<my-footer :cur="2"></my-footer>
 	</view>
 </template>
@@ -184,10 +195,13 @@
 		},
 		data() {
 			return {
-
+				share: false
 			}
 		},
 		methods: {
+			open() {
+				this.share = true;
+			},
 			goTo(str) {
 				if (str == '关于我们') {
 					uni.navigateTo({
@@ -250,6 +264,23 @@
 		background-color: #ffffff;
 		overflow-y: auto;
 		padding-bottom: 1000rpx;
+
+		&.active {
+			overflow-y: auto;
+			padding-bottom: 0rpx;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				background: #000000;
+				opacity: 0.5;
+				z-index: 2;
+			}
+		}
 
 		.head {
 			width: 100%;
@@ -466,6 +497,13 @@
 				width: 670rpx;
 				height: 180rpx;
 			}
+		}
+
+		.popCenter {
+			width: 560rpx;
+			height: 822rpx;
+			background: #F8F8F8;
+			border-radius: 10rpx;
 		}
 	}
 </style>

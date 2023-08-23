@@ -2,7 +2,7 @@
 	<view class="container">
 		<view class="head">
 			<view class="nav">
-				<image src="@/static/back.png">
+				<image src="@/static/back.png" @tap="back">
 
 				</image>
 				<text>
@@ -123,7 +123,9 @@
 			}
 		},
 		methods: {
-
+			back() {
+				uni.navigateBack()
+			}
 		}
 	}
 </script>
@@ -192,11 +194,11 @@
 		}
 
 		.appointment-details {
-			
-			
+
+
 			background: #ffffff;
 			padding: 0 50rpx;
-			padding-top:27rpx;
+			padding-top: 27rpx;
 			box-sizing: border-box;
 
 			.divi {
