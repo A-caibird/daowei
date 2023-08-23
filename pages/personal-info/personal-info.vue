@@ -21,12 +21,12 @@
 		</view>
 		<view class="phone">
 			<view class="fir">
-				<view class="left">
+				<view class="left" >
 					<text>
 						实名认证
 					</text>
 				</view>
-				<view class="right">
+				<view class="right" @tap="goTo('实名认证')">
 					<text>已认证</text>
 					<image src="@/static/whiteRight.png">
 					</image>
@@ -111,6 +111,11 @@
 		methods: {
 			back() {
 				uni.navigateBack()
+			},
+			goTo(str){
+				uni.navigateTo({
+					url:'/pages/verified/verified'
+				})
 			}
 		}
 	}

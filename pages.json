@@ -11,6 +11,14 @@
 			}
 		
 		},{
+		    "path" : "pages/verified/verified",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},{
 			"path": "pages/mine/mine",
 			"style": {
 				"navigationBarTitleText": "",
@@ -99,7 +107,17 @@
 		}
 
 
-	],
+	    ,{
+            "path" : "pages/loading/loading",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+       
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

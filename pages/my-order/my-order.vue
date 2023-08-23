@@ -219,7 +219,7 @@
 
 				.center {
 					text {
-						@include fontStyle(36rpx, 500, #Ffffff, 36rpx);
+						@include fontStyle(36rpx, 700, #Ffffff, 36rpx);
 					}
 				}
 
