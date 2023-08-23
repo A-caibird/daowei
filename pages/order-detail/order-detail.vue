@@ -178,9 +178,9 @@
 
 				.right {
 					image {
-						background-color: yellow;
-						width: 11rpx;
-						height: 20rpx;
+						background-color: red;
+						width: 24rpx;
+						height: 24rpx;
 						margin-left: 10rpx;
 					}
 

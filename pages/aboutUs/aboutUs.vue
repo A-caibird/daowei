@@ -4,7 +4,7 @@
 			<text>
 				关于我们
 			</text>
-			<image @tap="uni.navigateBack()" class="back" src="@/static/whiteLeft.png">
+			<image @tap="back" class="back" src="@/static/whiteLeft.png">
 			</image>
 		</view>
 		<view class="empty">
@@ -46,7 +46,7 @@
 					隐私协议
 				</text>
 				<image src="@/static/whiteRight.png">
-			
+
 				</image>
 			</view>
 		</view>
@@ -61,7 +61,9 @@
 			}
 		},
 		methods: {
-
+			back() {
+				uni.navigateBack();
+			}
 		}
 	}
 </script>
@@ -157,12 +159,14 @@
 			box-sizing: border-box;
 			padding: 27rpx 33rpx;
 			margin-top: 20rpx;
-			.divi{
+
+			.divi {
 				height: 1rpx;
 				background: #EAEAEA;
 				width: 100%;
-				margin:28rpx 0;
+				margin: 28rpx 0;
 			}
+
 			.one {
 				@include flexX;
 				align-items: center;

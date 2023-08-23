@@ -76,7 +76,8 @@
 				</view>
 			</view>
 			<view class="order-area">
-				<view class="order-item" :class="{fir:!index}" v-for="(item,index) of 2" :key="index">
+				<view class="order-item" :class="{fir:!index}" v-for="(item,index) of 2" :key="index"
+					@tap="goTo('待确认')">
 					<view class="order-code">
 						<view class="left">
 							<text>
@@ -152,10 +153,10 @@
 </template>
 
 <script>
-	import myFooter from  '@/components/footer.vue'
+	import myFooter from '@/components/footer.vue'
 	export default {
-		components:{
-			 myFooter
+		components: {
+			myFooter
 		},
 		data() {
 			return {
@@ -168,6 +169,13 @@
 					return index == num
 				})
 				console.log(this.selectList)
+			},
+			goTo(str) {
+				if (str == '待确认') {
+					uni.navigateTo({
+						url: '/pages/order-detail/order-detail'
+					})
+				}
 			}
 		}
 	}
@@ -452,9 +460,10 @@
 
 									&:last-of-type {
 										@include fontStyle(24rpx, 400, #919191, 33rpx);
-										
+
 									}
-									&:first-of-type{
+
+									&:first-of-type {
 										margin-bottom: 20rpx;
 									}
 								}
@@ -463,7 +472,8 @@
 
 						.right {
 							position: absolute;
-							right:0;
+							right: 0;
+
 							text {
 								@include fontStyle(24rpx, 400, #919191, 33rpx);
 								display: block;

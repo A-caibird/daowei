@@ -4,7 +4,7 @@
 			<text>
 				意见反馈
 			</text>
-			<image @tap="uni.navigateBack()" class="back" src="@/static/whiteLeft.png">
+			<image @tap="back" class="back" src="@/static/whiteLeft.png">
 			</image>
 		</view>
 		<view class="empty">
@@ -29,6 +29,9 @@
 		},
 		methods: {
 
+			back() {
+				uni.navigateBack()
+			}
 		}
 	}
 </script>
@@ -80,16 +83,18 @@
 			.pla {
 				@include fontStyle(32rpx, 400, #DDDDDD, 45rpx);
 			}
-			
+
 		}
-		.btn{
+
+		.btn {
 			width: 100%;
 			@include flexY;
 			align-items: center;
 			margin-top: 68rpx;
-			text{
-				@include fontStyle(36rpx, 500, #ffffff,50rpx);
-				padding:24rpx 242rpx;
+
+			text {
+				@include fontStyle(36rpx, 500, #ffffff, 50rpx);
+				padding: 24rpx 242rpx;
 				background: #E94A44;
 				border-radius: 57rpx;
 			}

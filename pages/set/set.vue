@@ -4,7 +4,7 @@
 			<text>
 				设置
 			</text>
-			<image @tap="uni.navigateBack()" class="back" src="@/static/whiteLeft.png">
+			<image @tap="back" class="back" src="@/static/whiteLeft.png">
 			</image>
 		</view>
 		<view class="empty">
@@ -77,6 +77,9 @@
 				if (num == 1) {
 					this.quit = true
 				} else this.logOut = true
+			},
+			back() {
+				uni.navigateBack();
 			}
 		}
 	}

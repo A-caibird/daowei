@@ -5,7 +5,7 @@
 				<text>
 					我的
 				</text>
-				<image src="@/static/set.png">
+				<image src="@/static/set.png" @tap="goTo('set')">
 
 				</image>
 			</view>
@@ -16,7 +16,7 @@
 						</image>
 					</view>
 					<view class="text-info">
-						<view class="up">
+						<view class="up" @tap="goTo('personInfo')">
 							<text>伟大的技师</text>
 							<image src="@/static/whiteRight.png"></image>
 						</view>
@@ -28,7 +28,7 @@
 					</view>
 				</view>
 				<view class="right">
-					<image>
+					<image src="@/static/mine/qr.png">
 					</image>
 				</view>
 			</view>
@@ -70,7 +70,7 @@
 
 			<view class="function">
 				<view class="box">
-					<view class="item">
+					<view class="item" @tap="goTo('服务项目')">
 						<image src="@/static/mine/event.png">
 
 						</image>
@@ -78,7 +78,7 @@
 							服务项目
 						</text>
 					</view>
-					<view class="item">
+					<view class="item" @tap="goTo('服务时间')">
 						<image src="@/static/mine/time.png">
 
 						</image>
@@ -86,7 +86,7 @@
 							服务时间
 						</text>
 					</view>
-					<view class="item">
+					<view class="item" @tap="goTo('服务区域')">
 						<image src="@/static/mine/area.png">
 
 						</image>
@@ -134,7 +134,7 @@
 			<view class="divi">
 
 			</view>
-			<view class="item">
+			<view class="item" @tap="goTo('意见反馈')">
 				<view class="left">
 					<image src="@/static/mine/feedback.png">
 
@@ -152,7 +152,7 @@
 			<view class="divi">
 
 			</view>
-			<view class="item">
+			<view class="item" @tap="goTo('关于我们')">
 				<view class="left">
 					<image src="@/static/mine/about.png">
 
@@ -179,7 +179,7 @@
 <script>
 	import myFooter from '@/components/footer.vue'
 	export default {
-		components:{
+		components: {
 			myFooter
 		},
 		data() {
@@ -188,7 +188,58 @@
 			}
 		},
 		methods: {
-
+			goTo(str) {
+				if (str == '关于我们') {
+					uni.navigateTo({
+						url: '/pages/aboutUs/aboutUs',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				} else if (str == '意见反馈') {
+					uni.navigateTo({
+						url: '/pages/feedback/feedback',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				} else if (str == '服务项目') {
+					uni.navigateTo({
+						url: '/pages/server-event/server-event',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				} else if (str == '服务时间') {
+					uni.navigateTo({
+						url: '/pages/server-time/server-time',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				} else if (str == '服务区域') {
+					uni.navigateTo({
+						url: '/pages/server-location/server-location',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				} else if (str == 'set') {
+					uni.navigateTo({
+						url: '/pages/set/set',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				} else if (str == 'personInfo') {
+					uni.navigateTo({
+						url: '/pages/personal-info/personal-info',
+						success: res => {},
+						fail: () => {},
+						complete: () => {}
+					});
+				}
+			}
 		}
 	}
 </script>
@@ -279,6 +330,10 @@
 						.down {
 							text {
 								@include fontStyle(24rpx, 400, #ffffff, 33rpx);
+								border: 2rpx solid #FFFFFF;
+								border-radius: 26rpx;
+								padding: 2rpx 10rpx;
+								padding-top: 0rpx;
 							}
 						}
 					}
@@ -288,7 +343,6 @@
 					image {
 						width: 80rpx;
 						height: 80rpx;
-						background: #ffffff;
 					}
 				}
 			}
@@ -388,9 +442,9 @@
 
 				.right {
 					image {
-						width: 11rpx;
-						height: 20rpx;
-						background: #B2B2B2;
+						width: 24rpx;
+						height: 24rpx;
+						background: red;
 					}
 				}
 			}
@@ -405,10 +459,9 @@
 
 		.ad {
 			position: relative;
-			top:360rpx;
-			padding: 0 40rpx;
-			box-sizing: border-box;
-			// z-index: 10;
+			top: 360rpx;
+			text-align: center;
+
 			image {
 				width: 670rpx;
 				height: 180rpx;

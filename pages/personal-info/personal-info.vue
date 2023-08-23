@@ -2,7 +2,7 @@
 	<view class="container">
 		<view class="nav">
 			<text>个人信息</text>
-			<image @tap="uni.navigateBack()" class="back" src="@/static/whiteLeft.png">
+			<image @tap="back" class="back" src="@/static/whiteLeft.png">
 
 			</image>
 		</view>
@@ -109,7 +109,9 @@
 			}
 		},
 		methods: {
-
+			back() {
+				uni.navigateBack()
+			}
 		}
 	}
 </script>

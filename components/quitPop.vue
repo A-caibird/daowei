@@ -38,6 +38,10 @@
 			op(num) {
 				if (num == 1) {
 					this.$emit('close', false);
+				} else if (num == 2){
+					uni.navigateTo({
+						url:'/pages/logIn/logIn'
+					})
 				}
 			}
 		}

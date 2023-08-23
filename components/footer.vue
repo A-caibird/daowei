@@ -1,11 +1,12 @@
 <template>
 	<view class="footer">
 		<u-tabbar :value="currentPage" @change="change1" :fixed="true" :placeholder="false" :safeAreaInsetBottom="false"
-			activeColor="#2E2727" inactiveColor="#B5B5B5" >
+			activeColor="#2E2727" inactiveColor="#B5B5B5">
 			<u-tabbar-item text="订单" class="item" @click="goTo(0)">
 				<image class="u-page__item__slot-icon-image" slot="active-icon" src="/static/index/order_ac.png">
 				</image>
-				<image class="u-page__item__slot-icon-image" slot="inactive-icon" src="/static/index/order_in.png"></image>
+				<image class="u-page__item__slot-icon-image" slot="inactive-icon" src="/static/index/order_in.png">
+				</image>
 			</u-tabbar-item>
 			<u-tabbar-item text="消息" class="item" @click="goTo(1)">
 				<image class="u-page__item__slot-icon-image" slot="active-icon" src="/static/index/mes_ac.png">
@@ -19,7 +20,7 @@
 				<image class="u-page__item__slot-icon-image" slot="inactive-icon" src="/static/index/min_in.png">
 				</image>
 			</u-tabbar-item>
-			
+
 		</u-tabbar>
 	</view>
 </template>
@@ -49,7 +50,7 @@
 					}
 					case 1: {
 						uni.navigateTo({
-							url:"/pages/message/message"
+							url: "/pages/message/message"
 						})
 						break;
 					}
@@ -72,21 +73,25 @@
 </script>
 
 <style lang="scss" scoped>
-	
+	::v-deep .u-tabbar__content {
+		box-shadow: 0rpx -2rpx 6rpx 0rpx rgba(188, 187, 187, 0.5);
+	}
+
 	::v-deep .u-page__item__slot-icon-image {
-		height:30.24rpx;
+		height: 30.24rpx;
 		width: 30.24rpx;
 	}
-	
+
 	::v-deep .data-v-32dc31a4 {
-		height:30.24rpx;
+		height: 30.24rpx;
 		width: 30.24rpx;
 	}
+
 	.u-tabbar {
 		padding: 20rpx 0;
 	}
-		
-	::v-deep .u-tabbar__content__item-wrapper{
+
+	::v-deep .u-tabbar__content__item-wrapper {
 		margin-bottom: 40rpx;
 		padding-top: 20rpx;
 	}
