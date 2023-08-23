@@ -1,5 +1,5 @@
 <template>
-	<view class="container " :class="{active:share}" >
+	<view class="container " :class="{active:share}">
 		<view class="head">
 			<view class="nav">
 				<text>
@@ -172,14 +172,70 @@
 			<image src="@/static/mine/ad.png">
 			</image>
 		</view>
-		<template v-if="0">
+		<template v-if="share">
 			<view class="popCenter">
+				<view class="avatar">
+					<view class="left">
+						<view class="image-box">
+							<image src="@/static/avatar.png">
+							</image>
+						</view>
+						<view class="text-info">
+							<view class="up" @tap="goTo('personInfo')">
+								<text>伟大的技师</text>
+								<image src="@/static/whiteRight.png"></image>
+							</view>
+							<view class="down">
+								<image></image>
+								<text>维修中心</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="des">
+					<text>
+						5年技师经验，擅长维修各个家电类型，洗衣机，空调，电视，冰箱，热水器，油烟机等等
+					</text>
+				</view>
+				<view class="qr">
+					<image>
 
+					</image>
+				</view>
+				<view class="jia">
+					<text>
+						扫一扫加好友
+					</text>
+				</view>
 			</view>
 		</template>
-		<template v-if="0">
+		<template v-if="share">
 			<view class="popBottom">
+				<view class="method">
+					<view class="one" style="">
+						<image src="@/static/pyq.png">
 
+						</image>
+						<text>
+							微信朋友圈
+						</text>
+					</view>
+					<view class="one">
+						<image src="@/static/weChat.png">
+
+						</image>
+						<text>
+							微信好友
+						</text>
+					</view>
+				</view>
+				<view class="divi">
+				</view>
+				<view class="bottom" @tap="cancelShare">
+					<text>
+						取消
+					</text>
+				</view>
 			</view>
 		</template>
 
@@ -199,6 +255,9 @@
 			}
 		},
 		methods: {
+			cancelShare(){
+				this.share = false;
+			},
 			open() {
 				this.share = true;
 			},
@@ -290,7 +349,10 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				background-color: red;
+				background: url('/static/bg.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
 				width: 100%;
 				height: 612rpx;
 			}
@@ -326,6 +388,7 @@
 				padding-left: 76rpx;
 				padding-right: 48rpx;
 				box-sizing: border-box;
+				align-items: center;
 
 				.left {
 					@include flexX;
@@ -500,10 +563,179 @@
 		}
 
 		.popCenter {
+			position: fixed;
 			width: 560rpx;
-			height: 822rpx;
 			background: #F8F8F8;
 			border-radius: 10rpx;
+			top: 274rpx;
+			left: 50%;
+			transform: translate3d(-50%, 0, 0);
+			z-index: 100;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 364rpx;
+				z-index: -1;
+				background: url('/static/bg.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+
+			.avatar {
+				width: 100%;
+				margin-top: 41rpx;
+				@include flexX;
+				justify-content: space-between;
+				padding-left: 40rpx;
+				box-sizing: border-box;
+
+				.left {
+					@include flexX;
+					align-items: center;
+
+
+					.image-box {
+						margin-right: 30rpx;
+
+						image {
+							width: 120rpx;
+							height: 120rpx;
+							border-radius: 50%;
+						}
+					}
+
+					.text-info {
+
+						.up {
+							@include flex;
+							align-items: center;
+
+							text {
+								@include fontStyle(36rpx, 700, #ffffff, 50rpx);
+							}
+
+							image {
+								width: 24rpx;
+								height: 24rpx;
+							}
+						}
+
+						.down {
+							@include flexX;
+							align-items: center;
+
+							image {
+								width: 32rpx;
+								height: 32rpx;
+								margin-right: 10rpx;
+								background-color: red;
+							}
+
+							text {
+								@include fontStyle(28rpx, 400, #ffffff, 40rpx);
+							}
+						}
+					}
+				}
+
+				.right {
+					image {
+						width: 80rpx;
+						height: 80rpx;
+					}
+				}
+			}
+
+			.des {
+				padding: 0 40rpx;
+
+				text {
+					@include fontStyle(22rpx, 400, #DDDDDD, 27rpx);
+				}
+			}
+
+			.qr {
+				position: relative;
+				left: 50%;
+				margin-top: 33rpx;
+				transform: translate(-50%);
+				background: #FFFFFF;
+				border-radius: 10rpx;
+				box-sizing: border-box;
+				padding: 32rpx 19rpx;
+				padding-bottom: 20rpx;
+				text-align: center;
+				display: inline-block;
+
+				image {
+					width: 442rpx;
+					height: 442rpx;
+					background-color: red;
+
+				}
+			}
+
+			.jia {
+				text-align: center;
+				margin-top: 20rpx;
+				margin-bottom: 25rpx;
+
+				text {
+					@include fontStyle(24rpx, 400, #B5B5B5, 33rpx);
+				}
+			}
+		}
+
+		.popBottom {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: #ffffff;
+			width: 100%;
+			z-index: 20000000000000000000;
+
+			.method {
+				width: 100%;
+				padding: 41rpx 73rpx;
+				box-sizing: border-box;
+				@include flexX;
+
+				.one {
+					@include flexY;
+					align-items: center;
+					margin-right: 64rpx;
+
+					image {
+						width: 100rpx;
+						height: 100rpx;
+						margin-bottom: 12rpx;
+					}
+
+					text {
+						@include fontStyle(22rpx, 400, #999999, 30rpx);
+					}
+				}
+			}
+
+			&>.divi {
+				height: 1rpx;
+				background: #DDDDDD;
+			}
+
+			.bottom {
+				text-align: center;
+				padding: 32rpx 0;
+
+				text {
+					@include fontStyle(30rpx, 500, #2E2727, 42rpx);
+				}
+			}
 		}
 	}
 </style>
